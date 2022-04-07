@@ -352,7 +352,7 @@ acc=modelAccuracy(models,X,y,1)
 #Saving the model
 import joblib
 jfile_name="Purchase_Prediction.pkl"
-joblib.dump(XGBClassifier(),jfile_name)  #We can increase the compress ratio, range 1 to 6
+joblib.dump(RandomForestClassifier(),jfile_name)  #We can increase the compress ratio, range 1 to 6
 
 
 # In[48]:
