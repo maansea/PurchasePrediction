@@ -41,21 +41,20 @@ options_Special_Days = list(np.arange(0.0, 1.0, 0.2))
 
 
 st.markdown("<h1 style='text-align: center;'>Customer Purchase Prediction App for an E-Commerce Setup 🚧</h1>", unsafe_allow_html=True)
-
 def main():
     with st.form('prediction_form'):
       
         st.subheader("Enter the input for following features:")
-        Administrative = st.slider("Select Administrattive: ", options = options_Administrative)
-        Administrative_duration = st.slider("Select Administrative Duration: ", options_Administrative_Duration)
-        Informational = st.slider("Select Informational: ", options = options_Informational)
-        Informational_duration = st.slider("Select Informational Duration: ", options = options_Informational_Duration)
-        Product_Related = st.slider("Select Product Related: ", options = options_Product_Related)
-        Product_Related_Duration = st.slider("Select  Product Related Duration: ", options =options_Product_Related_Duration)
-        Bounce_Rate = st.slider("Select Bounce Rate: ", options = options_Bounce_Rate)
-        Exit_Rate = st.slider("Select Exit Rate: ", options = options_Exit_Rate)
-        Page_Values = st.slider("Select Page Values: ", options = options_Page_Values)
-        Special_Days = st.slider("Select Special days: ", options = options_Special_Days)
+        Administrative = st.slider("Select Administrattive: ", 0, 30, value = 3, format = "%d")
+        Administrative_duration = st.slider("Select Administrative Duration: ", 0, 3000, value = 32, format = "%d")
+        Informational = st.slider("Select Informational: ", 0, 30, value = 7, format = "%d")
+        Informational_duration = st.slider("Select Informational Duration: ", 0, 2000, value= 125, format = "%d")
+        Product_Related = st.slider("Select Product Related: ", 0, 600, value = 27, format = "%d")
+        Product_Related_Duration = st.slider("Select  Product Related Duration: ", 0, 30000, value = 603, format = "%d")
+        Bounce_Rate = st.slider("Select Bounce Rate: ", 0, 0.2, value = 0.0003, format = "%d" )
+        Exit_Rate = st.slider("Select Exit Rate: ", 0, 0.2, value = 0.00043, format = "%d" )
+        Page_Values = st.slider("Select Page Values: ", 0, 400, value = 51.7563, format = "%d")
+        Special_Days = st.slider("Select Special days: ", 0, 1.0, value = 0.4, format = "%d")
         Operating_Systems = st.selectbox("Select the Operating System: ", options=options_Operating_Systems) 
         Browser = st.selectbox("Select the Browser: ", options=options_Browser)
         Region = st.selectbox("Select the Region: ", options_Region)
