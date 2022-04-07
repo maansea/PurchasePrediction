@@ -68,7 +68,7 @@ def main():
         submit = st.form_submit_button("Predict")
         
         
-     if submit:
+    if submit:
          Administrative =  LabelEncoder(Administrative, options_Administrative)
          Administrative_duration = LabelEncoder(Administrative_duration, options_Administrative_Duration) 
          Informational = LabelEncoder(Informational, options_Informational)
