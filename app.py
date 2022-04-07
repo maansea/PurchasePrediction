@@ -87,10 +87,10 @@ def main():
          Month = LabelEncoder(Month, options_Month)
             
             
-         data = np.array([Administrative,Administrative_duration, Informational, Informational_duration, Product_Related,
+         dfr = np.array([Administrative,Administrative_duration, Informational, Informational_duration, Product_Related,
                             Product_Related_Duration, Exit_Rate, Bounce_Rate, Page_Values, Special_Days, Operating_Systems, 
                             Browser, Region, Traffic_Type, Visitor_Type, Weekend, Month ]).reshape(-1,1)
-         pred = get_prediction(data = data, model = rf_model)
+         pred = get_prediction(data = dfr, model = rf_model)
          if pred[0] == 0:
           pred = "Consumer will not buy"
          else:
