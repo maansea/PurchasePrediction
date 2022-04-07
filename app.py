@@ -98,7 +98,7 @@ def main():
                 
             
             
-              st.write(f"The customer purchase intent prediction :  {pred}")
+            st.write(f"The customer purchase intent prediction :  {pred}")
   
 
 if __name__ == '__main__':
