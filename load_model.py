@@ -11,7 +11,7 @@ def get_model(model_path):
         print("Cannot fetch model from local downloading from drive")
         if not 'Purchase_Prediction.pkl' in os.listdir('.'):
             # example url: "https://drive.google.com/uc?id=1YcDspGzsToodglZlovj7dLRUkK-0JrPL&export=download"
-            url = "https://drive.google.com/uc?id=1YcDspGzsToodglZlovj7dLRUkK-0JrPL&export=download"
+            url = "https://drive.google.com/uc?id=1wlXZLXNXb7MP-b_YZND0AZqk-3nXCC4i&export=download"
             r = requests.get(url, allow_redirects=True)
             open(r"Purchase_Prediction.pkl", 'wb').write(r.content)
             del r
