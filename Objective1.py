@@ -37,7 +37,7 @@ from xgboost import XGBClassifier
 # In[3]:
 
 
-df1 = pd.read_csv("D:/TISS/SEM4/dissertation/online_shoppers_intention.csv")
+df1 = pd.read_csv("online_shoppers_intention.csv")
 
 
 # In[4]:
