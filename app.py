@@ -44,6 +44,7 @@ st.markdown("<h1 style='text-align: center;'>Customer Purchase Prediction App fo
 
 def main():
     with st.form('prediction_form'):
+      
         st.subheader("Enter the input for following features:")
         Administrative = st.slider("Select Administrattive: ", options = options_Administrative)
         Administrative_duration = st.slider("Select Administrative Duration: ", options_Administrative_Duration)
@@ -67,38 +68,38 @@ def main():
         submit = st.form_submit_button("Predict")
         
         
-        if submit:
-            Administrative =  LabelEncoder(Administrative, options_Administrative)
-            Administrative_duration = LabelEncoder(Administrative_duration, options_Administrative_Duration) 
-            Informational = LabelEncoder(Informational, options_Informational)
-            Informational_duration =  LabelEncoder(Informational_duration, options_Informational_Duration)
-            Product_Related = LabelEncoder(Product_Related, options_Product_Related)
-            Product_Related_Duration = LabelEncoder(Product_Related_Duration, options_Product_Related_Duration) 
-            Exit_Rate = LabelEncoder(Exit_Rate, options_Exit_Rate)
-            Bounce_Rate = LabelEncoder(Bounce_Rate, options_Bounce_Rate)
-            Page_Values = LabelEncoder(Page_Values, options_Page_Values) 
-            Special_Days = LabelEncoder(Special_Days, options_Special_Days)
-            Operating_Systems = LabelEncoder(Operating_Systems, options_Operating_Systems)
-            Browser = LabelEncoder(Browser, options_Browser) 
-            Region = LabelEncoder(Region, options_Region)
-            Traffic_Type = LabelEncoder(Traffic_Type, options_Traffic_Type)
-            Visitor_Type = LabelEncoder(Visitor_Type, options_Visitor_Type)
-            Weekend = LabelEncoder(Weekend, options_Weekend)
-            Month = LabelEncoder(Month, options_Month)
+     if submit:
+         Administrative =  LabelEncoder(Administrative, options_Administrative)
+         Administrative_duration = LabelEncoder(Administrative_duration, options_Administrative_Duration) 
+         Informational = LabelEncoder(Informational, options_Informational)
+         Informational_duration =  LabelEncoder(Informational_duration, options_Informational_Duration)
+         Product_Related = LabelEncoder(Product_Related, options_Product_Related)
+         Product_Related_Duration = LabelEncoder(Product_Related_Duration, options_Product_Related_Duration) 
+         Exit_Rate = LabelEncoder(Exit_Rate, options_Exit_Rate)
+         Bounce_Rate = LabelEncoder(Bounce_Rate, options_Bounce_Rate)
+         Page_Values = LabelEncoder(Page_Values, options_Page_Values) 
+         Special_Days = LabelEncoder(Special_Days, options_Special_Days)
+         Operating_Systems = LabelEncoder(Operating_Systems, options_Operating_Systems)
+         Browser = LabelEncoder(Browser, options_Browser) 
+         Region = LabelEncoder(Region, options_Region)
+         Traffic_Type = LabelEncoder(Traffic_Type, options_Traffic_Type)
+         Visitor_Type = LabelEncoder(Visitor_Type, options_Visitor_Type)
+         Weekend = LabelEncoder(Weekend, options_Weekend)
+         Month = LabelEncoder(Month, options_Month)
             
             
-            data = np.array([Administrative,Administrative_duration, Informational, Informational_duration, Product_Related,
+         data = np.array([Administrative,Administrative_duration, Informational, Informational_duration, Product_Related,
                             Product_Related_Duration, Exit_Rate, Bounce_Rate, Page_Values, Special_Days, Operating_Systems, 
                             Browser, Region, Traffic_Type, Visitor_Type, Weekend, Month ]).reshape(-1,1)
-            pred = get_prediction(data = data, model = rf_model)
-            if pred[0] == 0:
-                pred = "Consumer will not buy"
-            else :
-                pred = "Consumer will buy"
+         pred = get_prediction(data = data, model = rf_model)
+         if pred[0] == 0:
+          pred = "Consumer will not buy"
+         else:
+          pred = "Consumer will buy"
                 
             
             
-            st.write(f"The customer purchase intent prediction :  {pred}")
+         st.write(f"The customer purchase intent prediction :  {pred}")
   
 
 if __name__ == '__main__':
