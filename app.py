@@ -28,11 +28,11 @@ options_Month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sep',
 #creating sliders
 
 options_Administrative = list(range(0,30))
-options_Administrative_Duration = list(np.arange(0, 3000))
+options_Administrative_Duration = list(np.arange(0, 3000, 0.1))
 options_Informational = list(range(0,20))
-options_Informational_Duration = list(np.arange(0,2000))
+options_Informational_Duration = list(np.arange(0,2000, 0.2))
 options_Product_Related = list(range(0,600))
-options_Product_Related_Duration = list(np.arange(0,30000))
+options_Product_Related_Duration = list(np.arange(0,30000, 0.1))
 options_Bounce_Rate = list(np.arange(0.0,0.2, 0.0001))
 options_Exit_Rate = list(np.arange(0.0,0.2, 0.0001))
 options_Page_Values = list(np.arange(0.0,400.0, 0.001))
