@@ -15,10 +15,10 @@ st.set_page_config(page_title="Customer Purchase Prediction App for an E-Commerc
 #creating option list for dropdown menu
 #options_Operating_Systems = ['OS_1', 'OS_2', 'OS_3', 'OS_4', 'OS_5', 'OS_6','OS_7', 'OS_8']
 #options_Browser = ['Browser_1', 'Browser_2', 'Browser_3', 'Browser_4', 'Browser_5', 'Browser_6', 'Browser_7', 'Browser_8',
-                  'Browser_9', 'Browser_10', 'Browser_11', 'Browser_12', 'Browser_13']
+                  #'Browser_9', 'Browser_10', 'Browser_11', 'Browser_12', 'Browser_13']
 #options_Region = ['Region1', 'Region2', 'Region3', 'Region4', 'Region5', 'Region6', 'Region7', 'Region8', 'Region9']
 #options_Traffic_Type = ['TrafficType1', 'TrafficType2', 'TrafficType3', 'TrafficType4', 'TrafficType5', 'TrafficType6', 'TrafficType7',
-                       'TrafficType8', 'TrafficType9', 'TrafficType10', 'TrafficType11', 'TrafficType12', 'TrafficType13']
+                       #'TrafficType8', 'TrafficType9', 'TrafficType10', 'TrafficType11', 'TrafficType12', 'TrafficType13']
 #options_Visitor_Type = ['Returning_Visitor', 'New_Visitor', 'Other']
 #options_Weekend = ['True', 'False']
 #options_Month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
