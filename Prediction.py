@@ -24,6 +24,7 @@ def get_prediction(data,model):
      predict the class of given data pointe
     """
     return model.predict(data)
+    print(model.predict(data))
 
 
 # In[ ]:
