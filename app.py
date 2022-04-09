@@ -52,7 +52,7 @@ def main():
         Product_Related = st.slider("Select Product Related: ",  min_value = 0, max_value = 600,  value = 123)
         #Product_Related_Duration = st.slider("Select  Product Related Duration: ", min_value = 0.0, max_value = 30000.0, value = 124.1, step = 0.1)
         Bounce_Rate = st.slider("Select Bounce Rate: ", min_value = 0.0, max_value = 0.2, value = 0.0007, step = 0.0001 )
-        Exit_Rate = st.slider("Select Exit Rate: ", min_value = 0.0, max_value = 0.2, value = 0.0009, step = 0.0001)
+        Exit_Rate = st.slider("Select Exit Rate: ", min_value = 0.0, max_value = 0.2, step = 0.0001)
         Page_Values = st.slider("Select Page Values: ", min_value = 0.0, max_value = 400.0, value = 1.005, step = 0.001)
         Special_Days = st.slider("Select Special days: ", min_value = 0.0, max_value = 1.0, value = 0.4, step = 0.2)
         Operating_Systems = st.selectbox("Select the Operating System: ", options=options_Operating_Systems) 
