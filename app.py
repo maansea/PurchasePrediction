@@ -32,7 +32,7 @@ options_Administrative_Duration = list(np.arange(0, 3000, 0.1))
 options_Informational = list(range(0,20))
 options_Informational_Duration = list(np.arange(0,2000, 0.2))
 options_Product_Related = list(range(0,600))
-options_Product_Related_Duration = list(np.arange(0,30000, 0.1))
+#options_Product_Related_Duration = list(np.arange(0,30000, 0.1))
 options_Bounce_Rate = list(np.arange(0.0,0.2, 0.0001))
 options_Exit_Rate = list(np.arange(0.0,0.2, 0.0001))
 options_Page_Values = list(np.arange(0.0,400.0, 0.001))
@@ -50,7 +50,7 @@ def main():
         Informational = st.slider("Select Informational: ", min_value = 0, max_value = 30,  value = 7)
         Informational_Duration = st.slider("Select Informational Duration: ", min_value = 0.0, max_value = 2000.0, value = 22.0, step = 0.2)
         Product_Related = st.slider("Select Product Related: ",  min_value = 0, max_value = 600,  value = 123)
-        Product_Related_Duration = st.slider("Select  Product Related Duration: ", min_value = 0.0, max_value = 30000.0, value = 124.1, step = 0.1)
+        #Product_Related_Duration = st.slider("Select  Product Related Duration: ", min_value = 0.0, max_value = 30000.0, value = 124.1, step = 0.1)
         Bounce_Rate = st.slider("Select Bounce Rate: ", min_value = 0.0, max_value = 0.2, value = 0.0007, step = 0.0001 )
         Exit_Rate = st.slider("Select Exit Rate: ", min_value = 0.0, max_value = 0.2, value = 0.0009, step = 0.0001)
         Page_Values = st.slider("Select Page Values: ", min_value = 0.0, max_value = 400.0, value = 1.005, step = 0.001)
@@ -73,7 +73,7 @@ def main():
          Informational = LabelEncoder(Informational, options_Informational)
          Informational_duration =  LabelEncoder(Informational_Duration, options_Informational_Duration)
          Product_Related = LabelEncoder(Product_Related, options_Product_Related)
-         Product_Related_Duration = LabelEncoder(Product_Related_Duration, options_Product_Related_Duration) 
+         #Product_Related_Duration = LabelEncoder(Product_Related_Duration, options_Product_Related_Duration) 
          Exit_Rate = LabelEncoder(Exit_Rate, options_Exit_Rate)
          Bounce_Rate = LabelEncoder(Bounce_Rate, options_Bounce_Rate)
          Page_Values = LabelEncoder(Page_Values, options_Page_Values) 
@@ -88,7 +88,8 @@ def main():
             
             
          dfr = np.array([Administrative, Administrative_duration, Informational, Informational_duration, Product_Related,
-                            Product_Related_Duration, Exit_Rate, Bounce_Rate, Page_Values, Special_Days, Operating_Systems, 
+                            #Product_Related_Duration, 
+                         Exit_Rate, Bounce_Rate, Page_Values, Special_Days, Operating_Systems, 
                             Browser, Region, Traffic_Type, Visitor_Type, Weekend, Month]).reshape(-1,1)
          pred = get_prediction(data = dfr, model = rf_model)
          if pred[0] == 0:
