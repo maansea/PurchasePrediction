@@ -45,7 +45,7 @@ def main():
     with st.form('prediction_form'):
       
         st.subheader("Enter the input for following features:")
-        Administrative = st.slider("Select Administrattive: ", 0, 30, value = 3, format = "%d")
+        Administrative = st.slider("Select Administrattive: ", min_value = 0.0, max_value = 30.0, step = 0.1 value = 3.6)
         #Administrative_duration = st.slider("Select Administrative Duration: ", 0, 3000, value = 32, format = "%d")
         #Informational = st.slider("Select Informational: ", 0, 30, value = 7, format = "%d")
         #Informational_duration = st.slider("Select Informational Duration: ", 0, 2000, value= 125, format = "%d")
