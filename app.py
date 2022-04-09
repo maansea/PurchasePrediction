@@ -54,7 +54,7 @@ def main():
         Bounce_Rate = st.slider("Select Bounce Rate: ", 0, 10, value = 2)
         Exit_Rate = st.slider("Select Exit Rate: ", 0, 10, value = 1 )
         Page_Values = st.slider("Select Page Values: ", 0, 400, value = 51)
-        Special_Days = st.slider("Select Special days: ", 0.0, 20.0, value = 3)
+        Special_Days = st.slider("Select Special days: ", 0, 20, value = 3)
         Operating_Systems = st.selectbox("Select the Operating System: ", options=options_Operating_Systems) 
         Browser = st.selectbox("Select the Browser: ", options=options_Browser)
         Region = st.selectbox("Select the Region: ", options_Region)
