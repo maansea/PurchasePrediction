@@ -50,7 +50,7 @@ def main():
         Informational = st.slider("Select Informational: ", min_value = 0, max_value = 30,  value = 7)
         Informational_Duration = st.slider("Select Informational Duration: ", min_value = 0.0, max_value = 2000.0, value = 22.0, step = 0.2)
         Product_Related = st.slider("Select Product Related: ",  min_value = 0, max_value = 600,  value = 123)
-        Product_Related_Duration = st.slider("Select  Product Related Duration: ", min_value = 0.0, max_value = 30000.0, value = 1234.1, step = 0.1)
+        Product_Related_Duration = st.slider("Select  Product Related Duration: ", min_value = 0.0, max_value = 3000.0, value = 124.1, step = 0.1)
         Bounce_Rate = st.slider("Select Bounce Rate: ", min_value = 0.0, max_value = 0.2, value = 0.0007, step = 0.0001 )
         Exit_Rate = st.slider("Select Exit Rate: ", min_value = 0.0, max_value = 0.2, value = 0.0009, step = 0.0001)
         Page_Values = st.slider("Select Page Values: ", min_value = 0.0, max_value = 400.0, value = 1.005, step = 0.001)
